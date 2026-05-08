@@ -1,4 +1,4 @@
-name: Publish Android APK Release
+name: Publish Microbots Release
 
 on:
   push:
@@ -6,6 +6,8 @@ on:
     paths:
       - VERSION
       - app/microbots-controller-debug.apk
+      - firmware/firmware-manifest.json
+      - firmware/microbots_codecell_c6_drive.bin
       - .github/workflows/release.yml
 
 permissions:
@@ -25,6 +27,9 @@ jobs:
           TAG: ${{ steps.version.outputs.tag }}
         run: |
           gh release delete "$TAG" --cleanup-tag --yes || true
-          gh release create "$TAG" app/microbots-controller-debug.apk \
+          gh release create "$TAG" \
+            app/microbots-controller-debug.apk \
+            firmware/firmware-manifest.json \
+            firmware/microbots_codecell_c6_drive.bin \
             --title "$TAG" \
-            --notes "Microbots Android controller $TAG"
+            --notes "Microbots Android controller and CodeCell C6 firmware $TAG"
