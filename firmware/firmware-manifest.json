@@ -1,10 +1,10 @@
 {
   "hardware": "CodeCell-C6",
   "project": "microbots_codecell_c6_drive",
-  "version": "962ffa3c0cb7",
+  "version": "0a66a3af54ec",
   "protocol_version": 3,
   "asset": "microbots_codecell_c6_drive.bin",
   "url": "https://github.com/DasSam441/Microbots-C6-Pub-App/releases/latest/download/microbots_codecell_c6_drive.bin",
-  "size": 667456,
-  "sha256": "3f932fa69bef16cac288dfcb705c170a76346c128761d68c5f720fa9bad7c398"
+  "size": 667280,
+  "sha256": "090bf5e2e0766a36e4144361c00d24f0a6957abb3ea7dd9c1fde985252c20dcf"
 }
